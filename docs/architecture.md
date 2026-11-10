@@ -90,13 +90,13 @@ conflicting evidence is reported as `INSUFFICIENT_EVIDENCE`.
 - `inputs/dataset.json` is the import source.
 - `reports/source-issue-map.json` records source IDs mapped to Jira issue keys.
 - `reports/assessment.sqlite3` stores assessment and investigation state.
-- The application currently writes new assessment files directly to
-  `reports/{assessment_id}.json` and `reports/{assessment_id}.md`, using the
-  configured `reports_dir`.
-- Checked-in report runs are organized separately: the designated final R2.4
-  JSON/Markdown pair is under `reports/final/`; other report runs are under
-  `reports/development/`. This archive organization does not change application
-  output paths or behavior.
+- Each completed run writes its JSON/Markdown pair to `reports/final/` under
+  the configured `reports_dir`. Existing report files in `final/` are moved to
+  `reports/development/` before the new pair is published, retaining earlier
+  runs.
+- The Markdown report endpoint searches `final/`, `development/`, and the
+  legacy report-directory root so previously generated reports remain
+  retrievable.
 
 ## Main implementation and tests
 

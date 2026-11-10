@@ -1,6 +1,7 @@
 import json
 import logging
 import re
+import tempfile
 import threading
 import time
 import uuid
@@ -26,6 +27,7 @@ from app.utils import adf_to_text, parse_target
 
 logger = logging.getLogger(__name__)
 SOURCE_ID = re.compile(r"^\[([^\]]+)\]")
+_REPORT_FILE_LOCK = threading.Lock()
 MANDATORY = re.compile(r"\bMandatory:\s*(yes|no)\b", re.IGNORECASE)
 ACCEPTANCE = re.compile(r"\bAcceptance criterion:\s*(.+)", re.IGNORECASE)
 REQUIREMENT_ID = re.compile(r"(?im)^\s*Requirement ID:\s*([A-Z0-9_-]+)\s*$")
@@ -434,17 +436,80 @@ def execute_assessment(
             },
             generated_at=datetime.now(timezone.utc).isoformat(),
         )
-        settings.reports_dir.mkdir(parents=True, exist_ok=True)
-        json_path = settings.reports_dir / f"{assessment_id}.json"
-        markdown_path = settings.reports_dir / f"{assessment_id}.md"
-        json_path.write_text(report.model_dump_json(indent=2), encoding="utf-8")
         from app.assessment.report_generator import render_markdown
 
-        markdown_path.write_text(render_markdown(report), encoding="utf-8")
+        save_assessment_report_files(
+            settings.reports_dir,
+            assessment_id,
+            report.model_dump_json(indent=2),
+            render_markdown(report),
+        )
         audit.save_report(assessment_id, report.model_dump(mode="json"))
         return report
     finally:
         client.close()
+
+
+def save_assessment_report_files(
+    reports_dir: Path,
+    assessment_id: str,
+    json_content: str,
+    markdown_content: str,
+) -> None:
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    final_dir = reports_dir / "final"
+    development_dir = reports_dir / "development"
+    final_dir.mkdir(exist_ok=True)
+    development_dir.mkdir(exist_ok=True)
+
+    final_paths = (
+        final_dir / f"{assessment_id}.json",
+        final_dir / f"{assessment_id}.md",
+    )
+    with _REPORT_FILE_LOCK:
+        existing_final = sorted(
+            (
+                *final_dir.glob("*.json"),
+                *final_dir.glob("*.md"),
+            ),
+            key=lambda path: path.name,
+        )
+        if any(path in existing_final for path in final_paths):
+            raise FileExistsError(
+                f"Report files already exist for assessment {assessment_id}"
+            )
+        conflicts = [development_dir / path.name for path in existing_final]
+        if any(path.exists() for path in conflicts):
+            raise FileExistsError(
+                "A report with the same name already exists in development."
+            )
+
+        moved_reports: list[tuple[Path, Path]] = []
+        published_reports: list[Path] = []
+        with tempfile.TemporaryDirectory(
+            prefix=".assessment-report-", dir=reports_dir
+        ) as temporary_directory:
+            temporary_dir = Path(temporary_directory)
+            staged_paths = (
+                temporary_dir / final_paths[0].name,
+                temporary_dir / final_paths[1].name,
+            )
+            staged_paths[0].write_text(json_content, encoding="utf-8")
+            staged_paths[1].write_text(markdown_content, encoding="utf-8")
+            try:
+                for source in existing_final:
+                    destination = development_dir / source.name
+                    source.replace(destination)
+                    moved_reports.append((source, destination))
+                for staged, destination in zip(staged_paths, final_paths):
+                    staged.replace(destination)
+                    published_reports.append(destination)
+            except OSError as error:
+                for published in reversed(published_reports):
+                    published.unlink(missing_ok=True)
+                for source, destination in reversed(moved_reports):
+                    destination.replace(source)
+                raise error
 
 
 def _summarize_llm_calls(calls: list[dict[str, Any]]) -> dict[str, Any]:
