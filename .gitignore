@@ -1,0 +1,10 @@
+.env
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+reports/*
+!reports/.gitkeep
+*.sqlite3
+TYN_AI_Engineering_Assessment.pdf
