@@ -7,4 +7,3 @@ __pycache__/
 reports/*
 !reports/.gitkeep
 *.sqlite3
-TYN_AI_Engineering_Assessment.pdf
