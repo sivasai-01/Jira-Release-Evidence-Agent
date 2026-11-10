@@ -57,7 +57,7 @@ reported provider usage. Add release-scenario coverage for the end-to-end
 assessment behavior.
 
 **Covered by:** `tests/test_release_scenario.py` and the broader test suite.
-The recorded offline validation was **71 passed**; tests use fakes and fixtures
+The current offline validation was **74 passed**; tests use fakes and fixtures
 and do not call Jira or an LLM provider.
 
 ## Report organization
