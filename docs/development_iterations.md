@@ -57,7 +57,7 @@ reported provider usage. Add release-scenario coverage for the end-to-end
 assessment behavior.
 
 **Covered by:** `tests/test_release_scenario.py` and the broader test suite.
-The recorded offline validation was **71 passed**; tests use fakes and fixtures
+The current offline validation was **74 passed**; tests use fakes and fixtures
 and do not call Jira or an LLM provider.
 
 ## Report organization
@@ -73,9 +73,10 @@ Report files are grouped by their role in the submitted assessment:
 - The SQLite database and `source-issue-map.json` remain directly under
   `reports/`.
 
-The report files above are archived outputs. The application still writes new
-assessment reports directly to its configured `reports_dir` (by default
-`reports/`); moving existing report files does not modify that runtime behavior.
+When an assessment completes, its JSON and Markdown pair is written to
+`reports/final/`. Any previous report files there are moved to
+`reports/development/`, so the newest completed run is the final pair and prior
+runs remain available. The database and issue map stay at the `reports/` root.
 
 ## Assessment outcome
 

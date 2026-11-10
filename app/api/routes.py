@@ -144,9 +144,13 @@ def create_router(settings: Settings, audit: AuditStore) -> APIRouter:
         if result["report"] is None:
             raise HTTPException(status_code=404, detail="Assessment report not found")
         report_data = report_with_usage_summary(result["report"])
-        report_path = settings.reports_dir / f"{assessment_id}.md"
         if format.casefold() == "markdown":
-            if not report_path.is_file():
+            report_paths = (
+                settings.reports_dir / "final" / f"{assessment_id}.md",
+                settings.reports_dir / "development" / f"{assessment_id}.md",
+                settings.reports_dir / f"{assessment_id}.md",
+            )
+            if not any(path.is_file() for path in report_paths):
                 raise HTTPException(status_code=404, detail="Markdown report not found")
             return Response(
                 content=render_markdown(AssessmentReport.model_validate(report_data)),

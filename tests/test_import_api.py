@@ -230,7 +230,10 @@ def test_assessment_report_api_returns_usage_citations_and_trace(tmp_path: Path)
         "metrics": {"llm_calls": 2, "llm_prompt_characters": 150},
     }
     audit.save_report("assessment-report-test", saved_report)
-    (tmp_path / "assessment-report-test.md").write_text("stale report", encoding="utf-8")
+    (tmp_path / "final").mkdir()
+    (tmp_path / "final" / "assessment-report-test.md").write_text(
+        "stale report", encoding="utf-8"
+    )
     app = FastAPI()
     app.include_router(routes.create_router(settings, audit))
     client = TestClient(app)
@@ -261,3 +264,49 @@ def test_assessment_report_api_returns_usage_citations_and_trace(tmp_path: Path)
     assert "Token usage coverage: 1 / 2 calls (partial)" in markdown_response.text
     assert "TYN-13" in markdown_response.text
     assert "commit mismatch" in markdown_response.text
+
+
+def test_assessment_report_api_finds_markdown_in_development_archive(
+    tmp_path: Path,
+) -> None:
+    settings = Settings(
+        reports_dir=tmp_path,
+        database_path=tmp_path / "audit.sqlite3",
+    )
+    audit = AuditStore(settings.database_path)
+    audit.create_assessment("archived-assessment")
+    audit.save_report(
+        "archived-assessment",
+        {
+            "assessment_id": "archived-assessment",
+            "dataset_label": "scope",
+            "project_key": "TYN",
+            "target": {"release": "R2.4"},
+            "overall_decision": "READY",
+            "total_requirements": 0,
+            "pass_count": 0,
+            "fail_count": 0,
+            "insufficient_evidence_count": 0,
+            "requirements": [],
+            "investigation_trace": [],
+            "execution_time_seconds": 1,
+            "llm_model": "gemini/test-model",
+            "generated_at": "2026-11-10T00:00:00+00:00",
+            "llm_usage": {},
+            "metrics": {},
+        },
+    )
+    development_dir = tmp_path / "development"
+    development_dir.mkdir()
+    (development_dir / "archived-assessment.md").write_text(
+        "archived report", encoding="utf-8"
+    )
+    app = FastAPI()
+    app.include_router(routes.create_router(settings, audit))
+
+    response = TestClient(app).get(
+        "/api/assessment/archived-assessment/report?format=markdown"
+    )
+
+    assert response.status_code == 200
+    assert "Release readiness: R2.4" in response.text
