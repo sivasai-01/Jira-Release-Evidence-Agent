@@ -150,8 +150,8 @@ Overall aggregation is deterministic: a mandatory `FAIL` yields `BLOCKED`; absen
 
 The submitted actual Jira-backed R2.4 report is available in both formats:
 
-- [Release-readiness report (Markdown)](reports/22fab5b9-7683-4911-81e9-7596d5168053.md)
-- [Release-readiness report (JSON)](reports/22fab5b9-7683-4911-81e9-7596d5168053.json)
+- [Release-readiness report (Markdown)](reports/final/22fab5b9-7683-4911-81e9-7596d5168053.md)
+- [Release-readiness report (JSON)](reports/final/22fab5b9-7683-4911-81e9-7596d5168053.json)
 
 The JSON report contains the full **370-event investigation trace**, including Jira tool calls, arguments, results, and durations. The Markdown report includes a readable investigation-trace summary and, for each requirement, its decision, explanation, supporting Jira issue/comment citations, rejected evidence, applicability, and outstanding verification.
 
