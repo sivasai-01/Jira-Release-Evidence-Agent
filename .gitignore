@@ -4,6 +4,3 @@ venv/
 __pycache__/
 .pytest_cache/
 *.py[cod]
-reports/*
-!reports/.gitkeep
-*.sqlite3

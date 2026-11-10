@@ -1,0 +1,1078 @@
+{
+  "assessment_id": "f2571990-8bbd-4f95-bc92-8ab7ad6076a4",
+  "dataset_label": "tyn-release-assessment-v2",
+  "project_key": "SCRUM",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "overall_decision": "NEEDS_REVIEW",
+  "total_requirements": 12,
+  "pass_count": 0,
+  "fail_count": 0,
+  "insufficient_evidence_count": 12,
+  "requirements": [
+    {
+      "requirement_id": "REQ-09",
+      "summary": "Rollback rehearsal",
+      "mandatory": true,
+      "acceptance_criteria": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-11",
+      "summary": "Accessible keyboard handoff",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Verify QA results in SCRUM-106 and SCRUM-263 for target release R2.4, commit b7a91f2, service atlas-assistant, and production environment.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-03",
+      "summary": "Answer quality for deployed prompt",
+      "mandatory": true,
+      "acceptance_criteria": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Verify quality evaluation score and prompt match in SCRUM-218 or SCRUM-30",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-02",
+      "summary": "Customer document isolation",
+      "mandatory": true,
+      "acceptance_criteria": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Verify test results for SCRUM-310 / REC-1001 regarding customer document isolation on R2.4 production environment.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-07",
+      "summary": "Sensitive log redaction",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Need comment evidence for SCRUM-333 or SCRUM-400 containing QA verification results for R2.4, commit b7a91f2, prompt p7, production environment, and atlas-assistant service.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-05",
+      "summary": "Model usage cost",
+      "mandatory": true,
+      "acceptance_criteria": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Cost run results for SCRUM-356 matching release R2.4, commit b7a91f2, prompt p7, production environment, and service atlas-assistant",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-12",
+      "summary": "Streaming completion integrity",
+      "mandatory": true,
+      "acceptance_criteria": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-08",
+      "summary": "Human handoff delivery",
+      "mandatory": true,
+      "acceptance_criteria": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14.077507517s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-3.5-flash-lite\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 15\n}\n, retry_delay {\n  seconds: 14\n}\n]",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-04",
+      "summary": "Response latency",
+      "mandatory": true,
+      "acceptance_criteria": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 10.221892575s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-3.5-flash-lite\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 15\n}\n, retry_delay {\n  seconds: 10\n}\n]",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-10",
+      "summary": "Document parsing completeness",
+      "mandatory": true,
+      "acceptance_criteria": "The target build must pass all 60 mandatory document parsing cases.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 9.795126401s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-3.5-flash-lite\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 15\n}\n, retry_delay {\n  seconds: 9\n}\n]",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-06",
+      "summary": "Production security approval",
+      "mandatory": true,
+      "acceptance_criteria": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 9.44751501s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-3.5-flash-lite\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 15\n}\n, retry_delay {\n  seconds: 9\n}\n]",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-01",
+      "summary": "Automated regression tests",
+      "mandatory": true,
+      "acceptance_criteria": "All automated regression cases must pass on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 8.99414274s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensions {\n    key: \"model\"\n    value: \"gemini-3.5-flash-lite\"\n  }\n  quota_dimensions {\n    key: \"location\"\n    value: \"global\"\n  }\n  quota_value: 15\n}\n, retry_delay {\n  seconds: 8\n}\n]",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    }
+  ],
+  "investigation_trace": [
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "project_key": "SCRUM",
+        "dataset_label": "tyn-release-assessment-v2",
+        "record_kind": "manifest",
+        "max_dataset_records": 1000
+      },
+      "result_summary": "Discovered one manifest and 12 linked requirements in Jira.",
+      "duration_ms": 4204.678400000034,
+      "timestamp": "2026-11-10T04:26:08.458285+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 510.0964999999178,
+      "timestamp": "2026-11-10T04:26:17.750215+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 1231.086899999923,
+      "timestamp": "2026-11-10T04:26:21.854424+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1951.1903999999731,
+      "timestamp": "2026-11-10T04:26:29.426845+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-109",
+        "source_id": "REC-6011"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 362.12799999998424,
+      "timestamp": "2026-11-10T04:26:33.268954+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-109",
+        "source_id": "REC-6011"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 732.4459000000161,
+      "timestamp": "2026-11-10T04:26:38.354549+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-178",
+        "source_id": "REC-6198"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 423.8791999999876,
+      "timestamp": "2026-11-10T04:26:50.763606+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-178",
+        "source_id": "REC-6198"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 925.6335000000036,
+      "timestamp": "2026-11-10T04:26:57.706631+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-364",
+        "source_id": "MANIFEST"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 510.10010000004513,
+      "timestamp": "2026-11-10T04:27:03.934125+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigate REQ-09 rollback rehearsal requirement and its linked evidence items SCRUM-109 and SCRUM-178.",
+        "issue_key": "SCRUM-147"
+      },
+      "result_summary": "SCRUM-109 records a successful rollback rehearsal (RB-401) matching target release R2.4, commit b7a91f2, service atlas-assistant, and production environment. SCRUM-178 records a failed rollback rehearsal (RB-402) on the same target. Rule states: 'For contradictory equally authoritative current records with no resolution, use insufficient evidence rather than file order.' Therefore, the evidence is contradictory and unresolved.",
+      "duration_ms": 0.04330000001573353,
+      "timestamp": "2026-11-10T04:27:13.233099+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "action_summary": "Investigate REQ-09 rollback rehearsal requirement and its linked evidence items SCRUM-109 and SCRUM-178.",
+        "arguments_json": "{\"issue_key\": \"SCRUM-147\"}",
+        "result_summary": "SCRUM-109 records a successful rollback rehearsal (RB-401) matching target release R2.4, commit b7a91f2, service atlas-assistant, and production environment. SCRUM-178 records a failed rollback rehearsal (RB-402) on the same target. Rule states: 'For contradictory equally authoritative current records with no resolution, use insufficient evidence rather than file order.' Therefore, the evidence is contradictory and unresolved."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 16.914300000053117,
+      "timestamp": "2026-11-10T04:27:13.249983+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 508.0186999999796,
+      "timestamp": "2026-11-10T04:27:29.836874+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 1015.6658000000789,
+      "timestamp": "2026-11-10T04:27:36.191159+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1534.3030000000226,
+      "timestamp": "2026-11-10T04:27:44.073572+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-106",
+        "source_id": "REC-8801"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 482.27570000005926,
+      "timestamp": "2026-11-10T04:27:49.703235+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-106",
+        "source_id": "REC-8801"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 919.8969999999917,
+      "timestamp": "2026-11-10T04:27:55.749663+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Validate comment 10508 on SCRUM-106",
+        "issue_key": "SCRUM-106",
+        "comment_id": "10508"
+      },
+      "result_summary": "Comment 10508 is for release R2.3 instead of R2.4.",
+      "duration_ms": 0.022700000045006163,
+      "timestamp": "2026-11-10T04:28:06.682725+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "action_summary": "Validate comment 10508 on SCRUM-106",
+        "arguments_json": "{\"issue_key\": \"SCRUM-106\", \"comment_id\": \"10508\"}",
+        "result_summary": "Comment 10508 is for release R2.3 instead of R2.4."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 11.289499999975305,
+      "timestamp": "2026-11-10T04:28:06.694006+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-263",
+        "source_id": "REC-8515"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 996.3626999999633,
+      "timestamp": "2026-11-10T04:28:12.436573+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-364",
+        "source_id": "MANIFEST"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 925.7842000001801,
+      "timestamp": "2026-11-10T04:28:20.123268+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "jql_query": "project = SCRUM AND text ~ \"REQ-11\"",
+        "max_results": 10
+      },
+      "result_summary": "Found 1 issues in the enforced project and dataset scope.",
+      "duration_ms": 512.4912999999651,
+      "timestamp": "2026-11-10T04:28:25.443530+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "jql_query": "project = SCRUM AND text ~ \"KBD-\"",
+        "max_results": 10
+      },
+      "result_summary": "Found 0 issues in the enforced project and dataset scope.",
+      "duration_ms": 510.0529999999708,
+      "timestamp": "2026-11-10T04:28:29.024961+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-229"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 910.9794999999394,
+      "timestamp": "2026-11-10T04:28:43.258708+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-229"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1739.2730000001393,
+      "timestamp": "2026-11-10T04:28:48.277885+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-30",
+        "source_id": "REC-4323"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 927.3800000000847,
+      "timestamp": "2026-11-10T04:28:55.238526+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-218",
+        "source_id": "REC-1600"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 816.6853000000174,
+      "timestamp": "2026-11-10T04:29:03.738355+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-229",
+        "source_id": "REQ-03"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 410.1742000000286,
+      "timestamp": "2026-11-10T04:29:10.502567+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-30",
+        "source_id": "REC-4323"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 389.96799999995346,
+      "timestamp": "2026-11-10T04:29:15.706245+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-218",
+        "source_id": "REC-1600"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 612.4039999999695,
+      "timestamp": "2026-11-10T04:29:18.893084+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigated REQ-03 answer quality evaluation for deployed prompt p7 on release R2.4, commit b7a91f2, environment production, service atlas-assistant.",
+        "issue_key": "SCRUM-229"
+      },
+      "result_summary": "Evaluated SCRUM-30 (REC-4323) showing prompt p6 used in production, and SCRUM-218 (REC-1600) showing prompt p7 evaluated on staging and commit 9c3e1aa. Neither evaluation satisfies both prompt p7 and production environment for commit b7a91f2.",
+      "duration_ms": 0.031600000056641875,
+      "timestamp": "2026-11-10T04:29:27.200276+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "action_summary": "Investigated REQ-03 answer quality evaluation for deployed prompt p7 on release R2.4, commit b7a91f2, environment production, service atlas-assistant.",
+        "arguments_json": "{\"issue_key\": \"SCRUM-229\"}",
+        "result_summary": "Evaluated SCRUM-30 (REC-4323) showing prompt p6 used in production, and SCRUM-218 (REC-1600) showing prompt p7 evaluated on staging and commit 9c3e1aa. Neither evaluation satisfies both prompt p7 and production environment for commit b7a91f2."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 17.134400000031746,
+      "timestamp": "2026-11-10T04:29:27.217396+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-267",
+        "source_id": "REQ-02"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 482.36469999983456,
+      "timestamp": "2026-11-10T04:29:39.887359+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-267",
+        "source_id": "REQ-02"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 1346.4285000000018,
+      "timestamp": "2026-11-10T04:29:47.220072+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-267",
+        "source_id": "REQ-02"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1726.8295999999737,
+      "timestamp": "2026-11-10T04:29:50.433745+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-221",
+        "source_id": "REC-5825"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 1124.1973000001053,
+      "timestamp": "2026-11-10T04:29:52.894510+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-310",
+        "source_id": "REC-1001"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 960.8854999999039,
+      "timestamp": "2026-11-10T04:29:57.236588+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "issue_key": "SCRUM-310",
+        "source_id": "REC-1001"
+      },
+      "result_summary": "Found 1 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 849.673900000198,
+      "timestamp": "2026-11-10T04:30:12.858208+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "jql_query": "text ~ \"ISO-DEF-12\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 1 issues in the enforced project and dataset scope.",
+      "duration_ms": 511.6077000000132,
+      "timestamp": "2026-11-10T04:30:14.700997+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "jql_query": "summary ~ \"ISO-DEF-12\" OR text ~ \"ISO-DEF-12\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 1 issues in the enforced project and dataset scope.",
+      "duration_ms": 509.91419999991194,
+      "timestamp": "2026-11-10T04:30:18.697273+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigated REQ-02 (SCRUM-267) for customer document isolation on R2.4, commit b7a91f2, prompt p7, production environment, service atlas-assistant. Found linked retest issue SCRUM-310 (REC-1001) where QA Lead Priya Nair recorded isolation retest ISO-318 on 2026-11-08 for R2.4, commit b7a91f2, service atlas-assistant in production: Customer ALPHA received document BETA-017 belonging to customer BETA, and reopened defect ISO-DEF-12."
+      },
+      "result_summary": "Confirmed cross-customer document exposure on the target release and environment. Meets the FAIL condition for REQ-02.",
+      "duration_ms": 0.024400000029345392,
+      "timestamp": "2026-11-10T04:30:22.692287+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "action_summary": "Investigated REQ-02 (SCRUM-267) for customer document isolation on R2.4, commit b7a91f2, prompt p7, production environment, service atlas-assistant. Found linked retest issue SCRUM-310 (REC-1001) where QA Lead Priya Nair recorded isolation retest ISO-318 on 2026-11-08 for R2.4, commit b7a91f2, service atlas-assistant in production: Customer ALPHA received document BETA-017 belonging to customer BETA, and reopened defect ISO-DEF-12.",
+        "arguments_json": "{}",
+        "result_summary": "Confirmed cross-customer document exposure on the target release and environment. Meets the FAIL condition for REQ-02."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 14.807699999892066,
+      "timestamp": "2026-11-10T04:30:22.707085+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-333",
+        "source_id": "REQ-07"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 510.3298999999879,
+      "timestamp": "2026-11-10T04:30:36.719567+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-333",
+        "source_id": "REQ-07"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 812.5133000000915,
+      "timestamp": "2026-11-10T04:30:38.765605+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-333",
+        "source_id": "REQ-07"
+      },
+      "result_summary": "Found 4 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 2109.984899999972,
+      "timestamp": "2026-11-10T04:30:45.119419+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-400",
+        "source_id": "REC-9745"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 430.35329999997884,
+      "timestamp": "2026-11-10T04:30:49.210628+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-400",
+        "source_id": "REC-9745"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 909.6254000000954,
+      "timestamp": "2026-11-10T04:30:53.921320+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-54",
+        "source_id": "REC-6499"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 290.3719999999339,
+      "timestamp": "2026-11-10T04:30:57.707953+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-54",
+        "source_id": "REC-6499"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 978.0527000000347,
+      "timestamp": "2026-11-10T04:31:04.480544+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-364",
+        "source_id": "MANIFEST"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 512.3844999998255,
+      "timestamp": "2026-11-10T04:31:16.309774+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigated REQ-07 (SCRUM-333) Sensitive log redaction",
+        "issue_key": "SCRUM-333"
+      },
+      "result_summary": "Checked SCRUM-333, SCRUM-400, SCRUM-54, and SCRUM-364. SCRUM-400 contains a QA retest comment (comment 12037) by Priya Nair explicitly stating REDACT-901 supersedes REDACT-870, verifying on release R2.4, commit b7a91f2, service atlas-assistant, environment production that 28 of 28 redaction cases pass. SCRUM-54 is for service support-widget, which is out of scope. REQ-07 meets all criteria for PASS.",
+      "duration_ms": 0.03079999987676274,
+      "timestamp": "2026-11-10T04:31:21.783982+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "action_summary": "Investigated REQ-07 (SCRUM-333) Sensitive log redaction",
+        "arguments_json": "{\"issue_key\": \"SCRUM-333\"}",
+        "result_summary": "Checked SCRUM-333, SCRUM-400, SCRUM-54, and SCRUM-364. SCRUM-400 contains a QA retest comment (comment 12037) by Priya Nair explicitly stating REDACT-901 supersedes REDACT-870, verifying on release R2.4, commit b7a91f2, service atlas-assistant, environment production that 28 of 28 redaction cases pass. SCRUM-54 is for service support-widget, which is out of scope. REQ-07 meets all criteria for PASS."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 15.792099999998754,
+      "timestamp": "2026-11-10T04:31:21.799778+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-356",
+        "source_id": "REQ-05"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 516.4761000000908,
+      "timestamp": "2026-11-10T04:31:30.079313+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-356",
+        "source_id": "REQ-05"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 869.7154999999839,
+      "timestamp": "2026-11-10T04:31:34.061689+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-356",
+        "source_id": "REQ-05"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 2015.3080000000045,
+      "timestamp": "2026-11-10T04:31:39.680757+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-228",
+        "source_id": "REC-5716"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 377.87600000001476,
+      "timestamp": "2026-11-10T04:31:41.409953+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-228",
+        "source_id": "REC-5716"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 717.2012000000905,
+      "timestamp": "2026-11-10T04:31:45.840959+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-66",
+        "source_id": "REC-7454"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 407.454400000006,
+      "timestamp": "2026-11-10T04:32:00.481521+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-66",
+        "source_id": "REC-7454"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 659.2650000000049,
+      "timestamp": "2026-11-10T04:32:03.105657+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigated REQ-05 (SCRUM-356) Model usage cost for R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant.",
+        "issue_key": "SCRUM-356",
+        "requirement_id": "REQ-05"
+      },
+      "result_summary": "Found QA cost run COST-881 in SCRUM-228 showing mean cost USD 0.018 per successful request under the supplied fictional rate card, which exceeds the maximum allowed USD 0.012 per successful request. Developer note attempting to waive the criterion is ignored. Thus REQ-05 status is FAIL.",
+      "duration_ms": 0.02870000002985762,
+      "timestamp": "2026-11-10T04:32:08.781509+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "action_summary": "Investigated REQ-05 (SCRUM-356) Model usage cost for R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant.",
+        "arguments_json": "{\"issue_key\": \"SCRUM-356\", \"requirement_id\": \"REQ-05\"}",
+        "result_summary": "Found QA cost run COST-881 in SCRUM-228 showing mean cost USD 0.018 per successful request under the supplied fictional rate card, which exceeds the maximum allowed USD 0.012 per successful request. Developer note attempting to waive the criterion is ignored. Thus REQ-05 status is FAIL."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 9.831500000018423,
+      "timestamp": "2026-11-10T04:32:08.791327+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-404",
+        "source_id": "REQ-12"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 509.50620000003255,
+      "timestamp": "2026-11-10T04:32:22.497472+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-404",
+        "source_id": "REQ-12"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 835.4996000000483,
+      "timestamp": "2026-11-10T04:32:26.306420+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-404",
+        "source_id": "REQ-12"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1534.2166000000361,
+      "timestamp": "2026-11-10T04:32:30.280452+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-322",
+        "source_id": "REC-5957"
+      },
+      "result_summary": "Retrieved all 64 Jira comments; returned 52 prioritized comments within the context limit.",
+      "duration_ms": 719.8786999999811,
+      "timestamp": "2026-11-10T04:32:32.131111+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-322",
+        "source_id": "REC-5957"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 403.8274999998066,
+      "timestamp": "2026-11-10T04:32:33.454768+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-322",
+        "source_id": "REC-5957"
+      },
+      "result_summary": "Found 1 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 816.041499999983,
+      "timestamp": "2026-11-10T04:32:35.195829+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "jql_query": "text ~ \"REQ-12\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 1 issues in the enforced project and dataset scope.",
+      "duration_ms": 411.8223999998918,
+      "timestamp": "2026-11-10T04:32:36.940836+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "jql_query": "summary ~ \"Streaming completion integrity\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 2 issues in the enforced project and dataset scope.",
+      "duration_ms": 407.361900000069,
+      "timestamp": "2026-11-10T04:32:38.471812+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "jql_query": "project = \"SCRUM\" AND text ~ \"SCRUM-404\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 0 issues in the enforced project and dataset scope.",
+      "duration_ms": 397.46999999988475,
+      "timestamp": "2026-11-10T04:32:40.309813+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-364",
+        "source_id": "MANIFEST"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 0 prioritized comments within the context limit.",
+      "duration_ms": 713.4359000001496,
+      "timestamp": "2026-11-10T04:32:41.953061+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-39",
+        "source_id": "REC-2513"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 0 prioritized comments within the context limit.",
+      "duration_ms": 879.9148000000514,
+      "timestamp": "2026-11-10T04:32:43.756455+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 302.56389999999556,
+      "timestamp": "2026-11-10T04:32:47.171540+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-08"
+      },
+      "result_summary": "ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 14.077507517s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimen",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T04:32:48.274090+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-04",
+        "issue_key": "SCRUM-57",
+        "source_id": "REQ-04"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 411.9791000000532,
+      "timestamp": "2026-11-10T04:32:49.533036+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-04",
+        "issue_key": "SCRUM-57",
+        "source_id": "REQ-04"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 707.7632000000449,
+      "timestamp": "2026-11-10T04:32:51.065972+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-04"
+      },
+      "result_summary": "ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 10.221892575s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimen",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T04:32:51.385420+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-10"
+      },
+      "result_summary": "ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 9.795126401s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimens",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T04:32:51.812356+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-06"
+      },
+      "result_summary": "ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 9.44751501s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensi",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T04:32:52.207662+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-01"
+      },
+      "result_summary": "ERROR: ResourceExhausted: 429 You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 15, model: gemini-3.5-flash-lite, description: Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\nPlease retry in 8.99414274s. [links {\n  description: \"Learn more about Gemini API quotas\"\n  url: \"https://aistudio.google.com/docs/rate-limits\"\n}\n, violations {\n  description: \"Generate content requests per minute limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\"\n  quota_metric: \"generativelanguage.googleapis.com/generate_content_free_tier_requests\"\n  quota_id: \"GenerateRequestsPerMinutePerProjectPerModel-FreeTier\"\n  quota_dimensi",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T04:32:53.034392+00:00"
+    }
+  ],
+  "execution_time_seconds": 409.9449111,
+  "llm_model": "gemini/gemini-3.5-flash-lite",
+  "llm_usage": {
+    "input_tokens": 256458,
+    "output_tokens": 5546,
+    "total_tokens": 262004
+  },
+  "metrics": {
+    "llm_calls": 97,
+    "agent_tool_calls": 78,
+    "trace_events": 79
+  },
+  "generated_at": "2026-11-10T04:32:53.060653+00:00"
+}

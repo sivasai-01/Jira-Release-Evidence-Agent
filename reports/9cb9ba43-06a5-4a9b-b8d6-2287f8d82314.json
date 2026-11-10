@@ -1,0 +1,317 @@
+{
+  "assessment_id": "9cb9ba43-06a5-4a9b-b8d6-2287f8d82314",
+  "dataset_label": "tyn-release-assessment-v2",
+  "project_key": "SCRUM",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "overall_decision": "NEEDS_REVIEW",
+  "total_requirements": 12,
+  "pass_count": 0,
+  "fail_count": 0,
+  "insufficient_evidence_count": 12,
+  "requirements": [
+    {
+      "requirement_id": "REQ-09",
+      "summary": "Rollback rehearsal",
+      "mandatory": true,
+      "acceptance_criteria": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-11",
+      "summary": "Accessible keyboard handoff",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-03",
+      "summary": "Answer quality for deployed prompt",
+      "mandatory": true,
+      "acceptance_criteria": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-02",
+      "summary": "Customer document isolation",
+      "mandatory": true,
+      "acceptance_criteria": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-07",
+      "summary": "Sensitive log redaction",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-05",
+      "summary": "Model usage cost",
+      "mandatory": true,
+      "acceptance_criteria": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-12",
+      "summary": "Streaming completion integrity",
+      "mandatory": true,
+      "acceptance_criteria": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-08",
+      "summary": "Human handoff delivery",
+      "mandatory": true,
+      "acceptance_criteria": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-04",
+      "summary": "Response latency",
+      "mandatory": true,
+      "acceptance_criteria": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-10",
+      "summary": "Document parsing completeness",
+      "mandatory": true,
+      "acceptance_criteria": "The target build must pass all 60 mandatory document parsing cases.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-06",
+      "summary": "Production security approval",
+      "mandatory": true,
+      "acceptance_criteria": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-01",
+      "summary": "Automated regression tests",
+      "mandatory": true,
+      "acceptance_criteria": "All automated regression cases must pass on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "supporting_evidence": [],
+      "applicability": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    }
+  ],
+  "investigation_trace": [
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "project_key": "SCRUM",
+        "dataset_label": "tyn-release-assessment-v2",
+        "record_kind": "manifest",
+        "max_dataset_records": 1000
+      },
+      "result_summary": "Discovered one manifest and 12 linked requirements in Jira.",
+      "duration_ms": 2734.7303999995347,
+      "timestamp": "2026-11-09T17:07:07.109268+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-09"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:07.760285+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-11"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:08.306060+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-03"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:08.694006+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-02"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:09.076413+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-07"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:09.517828+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-05"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:09.936054+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-12"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:10.325859+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-08"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:10.748560+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-04"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:11.139541+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-10"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:11.534803+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-06"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:11.944923+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-01"
+      },
+      "result_summary": "ERROR: NotFound: 404 This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features and improvements. We recommend you to use the Interactions API (https://aistudio.google.com/docs/get-started).",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T17:07:12.375928+00:00"
+    }
+  ],
+  "execution_time_seconds": 8.793832700001076,
+  "llm_model": "gemini-2.5-flash",
+  "llm_usage": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null
+  },
+  "generated_at": "2026-11-09T17:07:12.383261+00:00"
+}

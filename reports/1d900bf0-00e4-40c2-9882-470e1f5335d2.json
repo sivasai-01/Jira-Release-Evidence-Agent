@@ -1,0 +1,2939 @@
+{
+  "assessment_id": "1d900bf0-00e4-40c2-9882-470e1f5335d2",
+  "dataset_label": "tyn-release-assessment-v2",
+  "project_key": "SCRUM",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "overall_decision": "NEEDS_REVIEW",
+  "total_requirements": 12,
+  "pass_count": 0,
+  "fail_count": 0,
+  "insufficient_evidence_count": 12,
+  "requirements": [
+    {
+      "requirement_id": "REQ-09",
+      "summary": "Rollback rehearsal",
+      "mandatory": true,
+      "acceptance_criteria": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 5,
+        "prompt_characters": 18949,
+        "input_tokens": 7449,
+        "output_tokens": 270,
+        "total_tokens": 7719,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2073,
+            "input_tokens": 941,
+            "output_tokens": 25,
+            "total_tokens": 966
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2686,
+            "input_tokens": 1175,
+            "output_tokens": 90,
+            "total_tokens": 1265
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3798,
+            "input_tokens": 1622,
+            "output_tokens": 25,
+            "total_tokens": 1647
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2611,
+            "input_tokens": 1169,
+            "output_tokens": 25,
+            "total_tokens": 1194
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 7781,
+            "input_tokens": 2542,
+            "output_tokens": 105,
+            "total_tokens": 2647
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [
+        {
+          "issue_key": "SCRUM-147",
+          "comment_id": "10710",
+          "source_id": "REQ-09",
+          "recorded_at": "2026-11-03T09:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-147",
+          "comment_id": "10711",
+          "source_id": "REQ-09",
+          "recorded_at": "2026-11-07T18:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-147",
+          "comment_id": "10712",
+          "source_id": "REQ-09",
+          "recorded_at": "2026-11-05T16:49:00+05:30",
+          "actor": "Dev Shah",
+          "role": "Engineer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-147",
+          "comment_id": "10713",
+          "source_id": "REQ-09",
+          "recorded_at": "2026-11-05T09:56:00+05:30",
+          "actor": "Mia Chen",
+          "role": "Project Coordinator",
+          "applicable": false,
+          "metadata_found": {
+            "release": "checklist"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "release": {
+              "expected": "R2.4",
+              "actual": "checklist"
+            }
+          },
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service",
+            "release mismatch: expected R2.4, found checklist"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-147",
+          "comment_id": "10714",
+          "source_id": "REQ-09",
+          "recorded_at": "2026-11-05T13:28:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        }
+      ],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-11",
+      "summary": "Accessible keyboard handoff",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 7045,
+        "input_tokens": 2848,
+        "output_tokens": 242,
+        "total_tokens": 3090,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-11",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2096,
+            "input_tokens": 950,
+            "output_tokens": 25,
+            "total_tokens": 975
+          },
+          {
+            "requirement_id": "REQ-11",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2725,
+            "input_tokens": 1189,
+            "output_tokens": 97,
+            "total_tokens": 1286
+          },
+          {
+            "requirement_id": "REQ-11",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2224,
+            "input_tokens": 709,
+            "output_tokens": 120,
+            "total_tokens": 829
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "QA verification of keyboard navigation and focus handling on release R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-03",
+      "summary": "Answer quality for deployed prompt",
+      "mandatory": true,
+      "acceptance_criteria": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 6861,
+        "input_tokens": 2783,
+        "output_tokens": 146,
+        "total_tokens": 2929,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-03",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2095,
+            "input_tokens": 955,
+            "output_tokens": 21,
+            "total_tokens": 976
+          },
+          {
+            "requirement_id": "REQ-03",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2537,
+            "input_tokens": 1114,
+            "output_tokens": 25,
+            "total_tokens": 1139
+          },
+          {
+            "requirement_id": "REQ-03",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2229,
+            "input_tokens": 714,
+            "output_tokens": 100,
+            "total_tokens": 814
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-02",
+      "summary": "Customer document isolation",
+      "mandatory": true,
+      "acceptance_criteria": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 2,
+        "prompt_characters": 3669,
+        "input_tokens": 1445,
+        "output_tokens": 129,
+        "total_tokens": 1574,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-02",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2080,
+            "input_tokens": 945,
+            "output_tokens": 75,
+            "total_tokens": 1020
+          },
+          {
+            "requirement_id": "REQ-02",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 1589,
+            "input_tokens": 500,
+            "output_tokens": 54,
+            "total_tokens": 554
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-07",
+      "summary": "Sensitive log redaction",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 6938,
+        "input_tokens": 2855,
+        "output_tokens": 204,
+        "total_tokens": 3059,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-07",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2038,
+            "input_tokens": 940,
+            "output_tokens": 25,
+            "total_tokens": 965
+          },
+          {
+            "requirement_id": "REQ-07",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2687,
+            "input_tokens": 1195,
+            "output_tokens": 104,
+            "total_tokens": 1299
+          },
+          {
+            "requirement_id": "REQ-07",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2213,
+            "input_tokens": 720,
+            "output_tokens": 75,
+            "total_tokens": 795
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-05",
+      "summary": "Model usage cost",
+      "mandatory": true,
+      "acceptance_criteria": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 6932,
+        "input_tokens": 2876,
+        "output_tokens": 285,
+        "total_tokens": 3161,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-05",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2069,
+            "input_tokens": 959,
+            "output_tokens": 25,
+            "total_tokens": 984
+          },
+          {
+            "requirement_id": "REQ-05",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2678,
+            "input_tokens": 1201,
+            "output_tokens": 102,
+            "total_tokens": 1303
+          },
+          {
+            "requirement_id": "REQ-05",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2185,
+            "input_tokens": 716,
+            "output_tokens": 158,
+            "total_tokens": 874
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Verify mean model cost per successful request is at most USD 0.012 using the exercise rate card for release R2.4, commit b7a91f2, prompt p7 in production service atlas-assistant.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-12",
+      "summary": "Streaming completion integrity",
+      "mandatory": true,
+      "acceptance_criteria": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 4,
+        "prompt_characters": 9040,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "rate_limited",
+            "prompt_characters": 2073,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 2,
+            "status": "completed",
+            "prompt_characters": 2073,
+            "input_tokens": 939,
+            "output_tokens": 25,
+            "total_tokens": 964
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2691,
+            "input_tokens": 1171,
+            "output_tokens": 64,
+            "total_tokens": 1235
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2203,
+            "input_tokens": 696,
+            "output_tokens": 84,
+            "total_tokens": 780
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-08",
+      "summary": "Human handoff delivery",
+      "mandatory": true,
+      "acceptance_criteria": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 5,
+        "prompt_characters": 18591,
+        "input_tokens": 7222,
+        "output_tokens": 247,
+        "total_tokens": 7469,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2106,
+            "input_tokens": 955,
+            "output_tokens": 21,
+            "total_tokens": 976
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2547,
+            "input_tokens": 1113,
+            "output_tokens": 24,
+            "total_tokens": 1137
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3902,
+            "input_tokens": 1578,
+            "output_tokens": 24,
+            "total_tokens": 1602
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2478,
+            "input_tokens": 1119,
+            "output_tokens": 25,
+            "total_tokens": 1144
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 7558,
+            "input_tokens": 2457,
+            "output_tokens": 153,
+            "total_tokens": 2610
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [
+        {
+          "issue_key": "SCRUM-52",
+          "comment_id": "10235",
+          "source_id": "REQ-08",
+          "recorded_at": "2026-11-03T09:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-52",
+          "comment_id": "10236",
+          "source_id": "REQ-08",
+          "recorded_at": "2026-11-04T10:07:00+05:30",
+          "actor": "Dev Shah",
+          "role": "Engineer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-52",
+          "comment_id": "10237",
+          "source_id": "REQ-08",
+          "recorded_at": "2026-11-07T18:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-52",
+          "comment_id": "10238",
+          "source_id": "REQ-08",
+          "recorded_at": "2026-11-05T16:49:00+05:30",
+          "actor": "Dev Shah",
+          "role": "Engineer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-52",
+          "comment_id": "10239",
+          "source_id": "REQ-08",
+          "recorded_at": "2026-11-05T10:03:00+05:30",
+          "actor": "Mia Chen",
+          "role": "Project Coordinator",
+          "applicable": false,
+          "metadata_found": {
+            "release": "review"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "release": {
+              "expected": "R2.4",
+              "actual": "review"
+            }
+          },
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service",
+            "release mismatch: expected R2.4, found review"
+          ]
+        }
+      ],
+      "outstanding_verification": [
+        "Need QA verification matching release R2.4, commit b7a91f2, environment production, and service atlas-assistant proving that human handoffs reach the support queue with their linked delivery dependency.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-04",
+      "summary": "Response latency",
+      "mandatory": true,
+      "acceptance_criteria": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 7074,
+        "input_tokens": 2948,
+        "output_tokens": 179,
+        "total_tokens": 3127,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-04",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2050,
+            "input_tokens": 955,
+            "output_tokens": 24,
+            "total_tokens": 979
+          },
+          {
+            "requirement_id": "REQ-04",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2754,
+            "input_tokens": 1238,
+            "output_tokens": 69,
+            "total_tokens": 1307
+          },
+          {
+            "requirement_id": "REQ-04",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2270,
+            "input_tokens": 755,
+            "output_tokens": 86,
+            "total_tokens": 841
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-10",
+      "summary": "Document parsing completeness",
+      "mandatory": true,
+      "acceptance_criteria": "The target build must pass all 60 mandatory document parsing cases.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 4,
+        "prompt_characters": 13827,
+        "input_tokens": 5517,
+        "output_tokens": 394,
+        "total_tokens": 5911,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2027,
+            "input_tokens": 940,
+            "output_tokens": 24,
+            "total_tokens": 964
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2569,
+            "input_tokens": 1149,
+            "output_tokens": 102,
+            "total_tokens": 1251
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3780,
+            "input_tokens": 1636,
+            "output_tokens": 170,
+            "total_tokens": 1806
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 5451,
+            "input_tokens": 1792,
+            "output_tokens": 98,
+            "total_tokens": 1890
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [
+        {
+          "issue_key": "SCRUM-61",
+          "comment_id": "10280",
+          "source_id": "REQ-10",
+          "recorded_at": "2026-11-03T09:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-61",
+          "comment_id": "10281",
+          "source_id": "REQ-10",
+          "recorded_at": "2026-11-04T10:07:00+05:30",
+          "actor": "Dev Shah",
+          "role": "Engineer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-61",
+          "comment_id": "10282",
+          "source_id": "REQ-10",
+          "recorded_at": "2026-11-05T11:14:00+05:30",
+          "actor": "Mia Chen",
+          "role": "Project Coordinator",
+          "applicable": false,
+          "metadata_found": {
+            "release": "checklist"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "release": {
+              "expected": "R2.4",
+              "actual": "checklist"
+            }
+          },
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service",
+            "release mismatch: expected R2.4, found checklist"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-61",
+          "comment_id": "10283",
+          "source_id": "REQ-10",
+          "recorded_at": "2026-11-07T18:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {},
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-61",
+          "comment_id": "10284",
+          "source_id": "REQ-10",
+          "recorded_at": "2026-11-05T09:56:00+05:30",
+          "actor": "Mia Chen",
+          "role": "Project Coordinator",
+          "applicable": false,
+          "metadata_found": {
+            "release": "checklist"
+          },
+          "missing_dimensions": [
+            "commit",
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "release": {
+              "expected": "R2.4",
+              "actual": "checklist"
+            }
+          },
+          "rejection_reasons": [
+            "missing commit",
+            "missing environment",
+            "missing service",
+            "release mismatch: expected R2.4, found checklist"
+          ]
+        }
+      ],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-06",
+      "summary": "Production security approval",
+      "mandatory": true,
+      "acceptance_criteria": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 5,
+        "prompt_characters": 19339,
+        "input_tokens": 7475,
+        "output_tokens": 181,
+        "total_tokens": 7656,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2066,
+            "input_tokens": 940,
+            "output_tokens": 21,
+            "total_tokens": 961
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2490,
+            "input_tokens": 1090,
+            "output_tokens": 24,
+            "total_tokens": 1114
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3810,
+            "input_tokens": 1549,
+            "output_tokens": 24,
+            "total_tokens": 1573
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2607,
+            "input_tokens": 1163,
+            "output_tokens": 24,
+            "total_tokens": 1187
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 8366,
+            "input_tokens": 2733,
+            "output_tokens": 88,
+            "total_tokens": 2821
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [
+        {
+          "issue_key": "SCRUM-77",
+          "comment_id": "10360",
+          "source_id": "REQ-06",
+          "recorded_at": "2026-11-03T09:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4",
+            "commit": "for"
+          },
+          "missing_dimensions": [
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "commit": {
+              "expected": "b7a91f2",
+              "actual": "for"
+            }
+          },
+          "rejection_reasons": [
+            "missing environment",
+            "missing service",
+            "commit mismatch: expected b7a91f2, found for"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-77",
+          "comment_id": "10361",
+          "source_id": "REQ-06",
+          "recorded_at": "2026-11-04T10:07:00+05:30",
+          "actor": "Dev Shah",
+          "role": "Engineer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4",
+            "commit": "for"
+          },
+          "missing_dimensions": [
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "commit": {
+              "expected": "b7a91f2",
+              "actual": "for"
+            }
+          },
+          "rejection_reasons": [
+            "missing environment",
+            "missing service",
+            "commit mismatch: expected b7a91f2, found for"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-77",
+          "comment_id": "10362",
+          "source_id": "REQ-06",
+          "recorded_at": "2026-11-05T11:14:00+05:30",
+          "actor": "Mia Chen",
+          "role": "Project Coordinator",
+          "applicable": false,
+          "metadata_found": {
+            "release": "checklist",
+            "commit": "for"
+          },
+          "missing_dimensions": [
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "release": {
+              "expected": "R2.4",
+              "actual": "checklist"
+            },
+            "commit": {
+              "expected": "b7a91f2",
+              "actual": "for"
+            }
+          },
+          "rejection_reasons": [
+            "missing environment",
+            "missing service",
+            "commit mismatch: expected b7a91f2, found for",
+            "release mismatch: expected R2.4, found checklist"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-77",
+          "comment_id": "10363",
+          "source_id": "REQ-06",
+          "recorded_at": "2026-11-07T18:00:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4",
+            "commit": "for"
+          },
+          "missing_dimensions": [
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "commit": {
+              "expected": "b7a91f2",
+              "actual": "for"
+            }
+          },
+          "rejection_reasons": [
+            "missing environment",
+            "missing service",
+            "commit mismatch: expected b7a91f2, found for"
+          ]
+        },
+        {
+          "issue_key": "SCRUM-77",
+          "comment_id": "10364",
+          "source_id": "REQ-06",
+          "recorded_at": "2026-11-05T15:42:00+05:30",
+          "actor": "Sam Patel",
+          "role": "Developer",
+          "applicable": false,
+          "metadata_found": {
+            "release": "R2.4",
+            "commit": "for"
+          },
+          "missing_dimensions": [
+            "environment",
+            "service"
+          ],
+          "mismatched_dimensions": {
+            "commit": {
+              "expected": "b7a91f2",
+              "actual": "for"
+            }
+          },
+          "rejection_reasons": [
+            "missing environment",
+            "missing service",
+            "commit mismatch: expected b7a91f2, found for"
+          ]
+        }
+      ],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-01",
+      "summary": "Automated regression tests",
+      "mandatory": true,
+      "acceptance_criteria": "All automated regression cases must pass on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "llm_usage": {
+        "calls": 3,
+        "prompt_characters": 6748,
+        "input_tokens": 2791,
+        "output_tokens": 175,
+        "total_tokens": 2966,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-01",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2012,
+            "input_tokens": 935,
+            "output_tokens": 24,
+            "total_tokens": 959
+          },
+          {
+            "requirement_id": "REQ-01",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2598,
+            "input_tokens": 1164,
+            "output_tokens": 82,
+            "total_tokens": 1246
+          },
+          {
+            "requirement_id": "REQ-01",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2138,
+            "input_tokens": 692,
+            "output_tokens": 69,
+            "total_tokens": 761
+          }
+        ]
+      },
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    }
+  ],
+  "investigation_trace": [
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "project_key": "SCRUM",
+        "dataset_label": "tyn-release-assessment-v2",
+        "record_kind": "manifest",
+        "max_dataset_records": 1000
+      },
+      "result_summary": "Discovered one manifest and 12 linked requirements in Jira.",
+      "duration_ms": 3033.0438999999387,
+      "timestamp": "2026-11-10T05:16:40.451466+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 411.0992000000806,
+      "timestamp": "2026-11-10T05:16:41.931417+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue SCRUM-147",
+        "issue_key": "SCRUM-147"
+      },
+      "result_summary": "Retrieved SCRUM-147 details successfully.",
+      "duration_ms": 0.026300000172341242,
+      "timestamp": "2026-11-10T05:16:42.784717+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "action_summary": "Get Jira issue SCRUM-147",
+        "arguments_json": "{\"issue_key\": \"SCRUM-147\"}",
+        "result_summary": "Retrieved SCRUM-147 details successfully."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 16.023000000132015,
+      "timestamp": "2026-11-10T05:16:42.800732+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 483.1911000001128,
+      "timestamp": "2026-11-10T05:16:43.269363+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1823.001700000077,
+      "timestamp": "2026-11-10T05:16:46.110763+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Reused 5 comments already retrieved from Jira.",
+      "duration_ms": 0.4650000000765431,
+      "timestamp": "2026-11-10T05:16:47.874840+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "comment_id": "10710",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:16:47.899253+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "comment_id": "10711",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:16:47.910184+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "comment_id": "10712",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:16:47.918506+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "comment_id": "10713",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service; release mismatch: expected R2.4, found checklist",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:16:47.928082+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "comment_id": "10714",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:16:47.932900+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 605.4967000000033,
+      "timestamp": "2026-11-10T05:16:52.165582+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue for SCRUM-166",
+        "issue_key": "SCRUM-166"
+      },
+      "result_summary": "Retrieved issue SCRUM-166 (Done) for REQ-11 with linked issues SCRUM-263, SCRUM-106, SCRUM-364.",
+      "duration_ms": 0.033599999824218685,
+      "timestamp": "2026-11-10T05:16:53.277070+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "action_summary": "Get Jira issue for SCRUM-166",
+        "arguments_json": "{\"issue_key\": \"SCRUM-166\"}",
+        "result_summary": "Retrieved issue SCRUM-166 (Done) for REQ-11 with linked issues SCRUM-263, SCRUM-106, SCRUM-364."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 19.04519999970944,
+      "timestamp": "2026-11-10T05:16:53.296187+00:00"
+    },
+    {
+      "tool": "inspect_requirement",
+      "arguments": {
+        "requirement_id": "REQ-03"
+      },
+      "result_summary": "Retrieved requirement from Jira.",
+      "duration_ms": 1018.352899999627,
+      "timestamp": "2026-11-10T05:16:58.002729+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-03",
+        "issue_key": "SCRUM-229",
+        "source_id": "REQ-03"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 0.10989999964294839,
+      "timestamp": "2026-11-10T05:16:59.143786+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-02",
+        "action_summary": "Inspecting requirement SCRUM-267 REQ-02",
+        "arguments_json": "{\\\"requirement_id\\\": \\\"REQ-02\\\"}",
+        "result_summary": "Calling inspect_requirement and get_jira_comments for SCRUM-267"
+      },
+      "result_summary": "ERROR: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)",
+      "duration_ms": 0.052599999889935134,
+      "timestamp": "2026-11-10T05:17:04.048088+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "issue_key": "SCRUM-333",
+        "source_id": "REQ-07"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 509.8937000002479,
+      "timestamp": "2026-11-10T05:17:06.297756+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue SCRUM-333",
+        "issue_key": "SCRUM-333"
+      },
+      "result_summary": "Retrieved issue SCRUM-333 for REQ-07 (Sensitive log redaction) with target release R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant.",
+      "duration_ms": 0.026400000024295878,
+      "timestamp": "2026-11-10T05:17:09.684336+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-07",
+        "action_summary": "Get Jira issue SCRUM-333",
+        "arguments_json": "{\"issue_key\": \"SCRUM-333\"}",
+        "result_summary": "Retrieved issue SCRUM-333 for REQ-07 (Sensitive log redaction) with target release R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 14.558699999724922,
+      "timestamp": "2026-11-10T05:17:09.698884+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "issue_key": "SCRUM-356",
+        "source_id": "REQ-05"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 381.0020999999324,
+      "timestamp": "2026-11-10T05:17:16.851947+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Retrieved issue SCRUM-356",
+        "issue_key": "SCRUM-356"
+      },
+      "result_summary": "Issue SCRUM-356 is a Story for REQ-05 with status Done, target release R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant.",
+      "duration_ms": 0.023500000224885298,
+      "timestamp": "2026-11-10T05:17:20.334024+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-05",
+        "action_summary": "Retrieved issue SCRUM-356",
+        "arguments_json": "{\"issue_key\": \"SCRUM-356\"}",
+        "result_summary": "Issue SCRUM-356 is a Story for REQ-05 with status Done, target release R2.4, commit b7a91f2, prompt p7, environment production, service atlas-assistant."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 15.628900000137946,
+      "timestamp": "2026-11-10T05:17:20.349642+00:00"
+    },
+    {
+      "tool": "llm_rate_limit_retry",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "operation": "tool_selection",
+        "retry_number": 1,
+        "retry_delay_seconds": 38.528295838
+      },
+      "result_summary": "LLM provider rate limit; retrying after the indicated delay.",
+      "duration_ms": 38528.295838,
+      "timestamp": "2026-11-10T05:17:23.044802+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "issue_key": "SCRUM-404",
+        "source_id": "REQ-12"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 548.6080999999103,
+      "timestamp": "2026-11-10T05:18:06.337736+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue SCRUM-404",
+        "issue_key": "SCRUM-404"
+      },
+      "result_summary": "Retrieved SCRUM-404 successfully.",
+      "duration_ms": 0.011000000085914508,
+      "timestamp": "2026-11-10T05:18:09.615657+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-12",
+        "action_summary": "Get Jira issue SCRUM-404",
+        "arguments_json": "{\"issue_key\": \"SCRUM-404\"}",
+        "result_summary": "Retrieved SCRUM-404 successfully."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 6.861399999706919,
+      "timestamp": "2026-11-10T05:18:09.622524+00:00"
+    },
+    {
+      "tool": "inspect_requirement",
+      "arguments": {
+        "requirement_id": "REQ-08"
+      },
+      "result_summary": "Retrieved requirement from Jira.",
+      "duration_ms": 1048.982100000103,
+      "timestamp": "2026-11-10T05:18:17.200192+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 388.8440000000628,
+      "timestamp": "2026-11-10T05:18:20.569783+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Found 2 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1021.5788999998949,
+      "timestamp": "2026-11-10T05:18:24.480671+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Reused 5 comments already retrieved from Jira.",
+      "duration_ms": 0.12849999984609894,
+      "timestamp": "2026-11-10T05:18:30.651482+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "comment_id": "10235",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:30.660483+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "comment_id": "10236",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:30.665638+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "comment_id": "10237",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:30.670808+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "comment_id": "10238",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:30.679848+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-08",
+        "issue_key": "SCRUM-52",
+        "comment_id": "10239",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service; release mismatch: expected R2.4, found review",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:30.685122+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-04",
+        "issue_key": "SCRUM-57",
+        "source_id": "REQ-04"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 408.62379999998666,
+      "timestamp": "2026-11-10T05:18:38.110381+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue SCRUM-57",
+        "issue_key": "SCRUM-57"
+      },
+      "result_summary": "Retrieved issue SCRUM-57 with status Done and 5 linked issues.",
+      "duration_ms": 0.012200000128359534,
+      "timestamp": "2026-11-10T05:18:41.160325+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-04",
+        "action_summary": "Get Jira issue SCRUM-57",
+        "arguments_json": "{\"issue_key\": \"SCRUM-57\"}",
+        "result_summary": "Retrieved issue SCRUM-57 with status Done and 5 linked issues."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 7.9089000000749365,
+      "timestamp": "2026-11-10T05:18:41.168235+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 369.17529999982435,
+      "timestamp": "2026-11-10T05:18:49.748052+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Retrieved Jira issue SCRUM-61",
+        "issue_key": "SCRUM-61"
+      },
+      "result_summary": "Issue SCRUM-61 retrieved successfully. It links to SCRUM-13 and SCRUM-364.",
+      "duration_ms": 0.010999999631167157,
+      "timestamp": "2026-11-10T05:18:54.360593+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "action_summary": "Retrieved Jira issue SCRUM-61",
+        "arguments_json": "{\"issue_key\": \"SCRUM-61\"}",
+        "result_summary": "Issue SCRUM-61 retrieved successfully. It links to SCRUM-13 and SCRUM-364."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 6.503499999780615,
+      "timestamp": "2026-11-10T05:18:54.367099+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 417.18800000035117,
+      "timestamp": "2026-11-10T05:18:54.778616+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "comment_id": "10280",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:57.714801+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "comment_id": "10281",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:57.720214+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "comment_id": "10282",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service; release mismatch: expected R2.4, found checklist",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:57.726753+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "comment_id": "10283",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:57.732361+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-10",
+        "issue_key": "SCRUM-61",
+        "comment_id": "10284",
+        "source_id": "REQ-10"
+      },
+      "result_summary": "Evidence is not applicable: missing commit; missing environment; missing service; release mismatch: expected R2.4, found checklist",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:18:57.740658+00:00"
+    },
+    {
+      "tool": "inspect_requirement",
+      "arguments": {
+        "requirement_id": "REQ-06"
+      },
+      "result_summary": "Retrieved requirement from Jira.",
+      "duration_ms": 864.9318000002495,
+      "timestamp": "2026-11-10T05:19:04.387108+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 441.0989000002701,
+      "timestamp": "2026-11-10T05:19:07.929611+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1565.137500000219,
+      "timestamp": "2026-11-10T05:19:11.410992+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Reused 5 comments already retrieved from Jira.",
+      "duration_ms": 0.11250000034124241,
+      "timestamp": "2026-11-10T05:19:12.618560+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "comment_id": "10360",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Evidence is not applicable: missing environment; missing service; commit mismatch: expected b7a91f2, found for",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:19:12.628355+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "comment_id": "10361",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Evidence is not applicable: missing environment; missing service; commit mismatch: expected b7a91f2, found for",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:19:12.632948+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "comment_id": "10362",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Evidence is not applicable: missing environment; missing service; commit mismatch: expected b7a91f2, found for; release mismatch: expected R2.4, found checklist",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:19:12.637840+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "comment_id": "10363",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Evidence is not applicable: missing environment; missing service; commit mismatch: expected b7a91f2, found for",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:19:12.646088+00:00"
+    },
+    {
+      "tool": "validate_evidence",
+      "arguments": {
+        "requirement_id": "REQ-06",
+        "issue_key": "SCRUM-77",
+        "comment_id": "10364",
+        "source_id": "REQ-06"
+      },
+      "result_summary": "Evidence is not applicable: missing environment; missing service; commit mismatch: expected b7a91f2, found for",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-10T05:19:12.651029+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-01",
+        "issue_key": "SCRUM-93",
+        "source_id": "REQ-01"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 674.3283999999221,
+      "timestamp": "2026-11-10T05:19:17.561448+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Get Jira issue SCRUM-93",
+        "issue_key": "SCRUM-93"
+      },
+      "result_summary": "Retrieved SCRUM-93 with links to SCRUM-320, SCRUM-134, SCRUM-364",
+      "duration_ms": 0.011099999937869143,
+      "timestamp": "2026-11-10T05:19:18.665918+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-01",
+        "action_summary": "Get Jira issue SCRUM-93",
+        "arguments_json": "{\"issue_key\": \"SCRUM-93\"}",
+        "result_summary": "Retrieved SCRUM-93 with links to SCRUM-320, SCRUM-134, SCRUM-364"
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 5.350899999939429,
+      "timestamp": "2026-11-10T05:19:18.671272+00:00"
+    }
+  ],
+  "execution_time_seconds": 165.36320440000054,
+  "llm_model": "gemini/gemini-3.5-flash-lite",
+  "llm_usage": {
+    "calls": [
+      {
+        "requirement_id": "REQ-09",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2073,
+        "input_tokens": 941,
+        "output_tokens": 25,
+        "total_tokens": 966
+      },
+      {
+        "requirement_id": "REQ-09",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2686,
+        "input_tokens": 1175,
+        "output_tokens": 90,
+        "total_tokens": 1265
+      },
+      {
+        "requirement_id": "REQ-09",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 3798,
+        "input_tokens": 1622,
+        "output_tokens": 25,
+        "total_tokens": 1647
+      },
+      {
+        "requirement_id": "REQ-09",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2611,
+        "input_tokens": 1169,
+        "output_tokens": 25,
+        "total_tokens": 1194
+      },
+      {
+        "requirement_id": "REQ-09",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 7781,
+        "input_tokens": 2542,
+        "output_tokens": 105,
+        "total_tokens": 2647
+      },
+      {
+        "requirement_id": "REQ-11",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2096,
+        "input_tokens": 950,
+        "output_tokens": 25,
+        "total_tokens": 975
+      },
+      {
+        "requirement_id": "REQ-11",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2725,
+        "input_tokens": 1189,
+        "output_tokens": 97,
+        "total_tokens": 1286
+      },
+      {
+        "requirement_id": "REQ-11",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2224,
+        "input_tokens": 709,
+        "output_tokens": 120,
+        "total_tokens": 829
+      },
+      {
+        "requirement_id": "REQ-03",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2095,
+        "input_tokens": 955,
+        "output_tokens": 21,
+        "total_tokens": 976
+      },
+      {
+        "requirement_id": "REQ-03",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2537,
+        "input_tokens": 1114,
+        "output_tokens": 25,
+        "total_tokens": 1139
+      },
+      {
+        "requirement_id": "REQ-03",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2229,
+        "input_tokens": 714,
+        "output_tokens": 100,
+        "total_tokens": 814
+      },
+      {
+        "requirement_id": "REQ-02",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2080,
+        "input_tokens": 945,
+        "output_tokens": 75,
+        "total_tokens": 1020
+      },
+      {
+        "requirement_id": "REQ-02",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 1589,
+        "input_tokens": 500,
+        "output_tokens": 54,
+        "total_tokens": 554
+      },
+      {
+        "requirement_id": "REQ-07",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2038,
+        "input_tokens": 940,
+        "output_tokens": 25,
+        "total_tokens": 965
+      },
+      {
+        "requirement_id": "REQ-07",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2687,
+        "input_tokens": 1195,
+        "output_tokens": 104,
+        "total_tokens": 1299
+      },
+      {
+        "requirement_id": "REQ-07",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2213,
+        "input_tokens": 720,
+        "output_tokens": 75,
+        "total_tokens": 795
+      },
+      {
+        "requirement_id": "REQ-05",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2069,
+        "input_tokens": 959,
+        "output_tokens": 25,
+        "total_tokens": 984
+      },
+      {
+        "requirement_id": "REQ-05",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2678,
+        "input_tokens": 1201,
+        "output_tokens": 102,
+        "total_tokens": 1303
+      },
+      {
+        "requirement_id": "REQ-05",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2185,
+        "input_tokens": 716,
+        "output_tokens": 158,
+        "total_tokens": 874
+      },
+      {
+        "requirement_id": "REQ-12",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "rate_limited",
+        "prompt_characters": 2073,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null
+      },
+      {
+        "requirement_id": "REQ-12",
+        "operation": "tool_selection",
+        "attempt": 2,
+        "status": "completed",
+        "prompt_characters": 2073,
+        "input_tokens": 939,
+        "output_tokens": 25,
+        "total_tokens": 964
+      },
+      {
+        "requirement_id": "REQ-12",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2691,
+        "input_tokens": 1171,
+        "output_tokens": 64,
+        "total_tokens": 1235
+      },
+      {
+        "requirement_id": "REQ-12",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2203,
+        "input_tokens": 696,
+        "output_tokens": 84,
+        "total_tokens": 780
+      },
+      {
+        "requirement_id": "REQ-08",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2106,
+        "input_tokens": 955,
+        "output_tokens": 21,
+        "total_tokens": 976
+      },
+      {
+        "requirement_id": "REQ-08",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2547,
+        "input_tokens": 1113,
+        "output_tokens": 24,
+        "total_tokens": 1137
+      },
+      {
+        "requirement_id": "REQ-08",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 3902,
+        "input_tokens": 1578,
+        "output_tokens": 24,
+        "total_tokens": 1602
+      },
+      {
+        "requirement_id": "REQ-08",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2478,
+        "input_tokens": 1119,
+        "output_tokens": 25,
+        "total_tokens": 1144
+      },
+      {
+        "requirement_id": "REQ-08",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 7558,
+        "input_tokens": 2457,
+        "output_tokens": 153,
+        "total_tokens": 2610
+      },
+      {
+        "requirement_id": "REQ-04",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2050,
+        "input_tokens": 955,
+        "output_tokens": 24,
+        "total_tokens": 979
+      },
+      {
+        "requirement_id": "REQ-04",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2754,
+        "input_tokens": 1238,
+        "output_tokens": 69,
+        "total_tokens": 1307
+      },
+      {
+        "requirement_id": "REQ-04",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2270,
+        "input_tokens": 755,
+        "output_tokens": 86,
+        "total_tokens": 841
+      },
+      {
+        "requirement_id": "REQ-10",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2027,
+        "input_tokens": 940,
+        "output_tokens": 24,
+        "total_tokens": 964
+      },
+      {
+        "requirement_id": "REQ-10",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2569,
+        "input_tokens": 1149,
+        "output_tokens": 102,
+        "total_tokens": 1251
+      },
+      {
+        "requirement_id": "REQ-10",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 3780,
+        "input_tokens": 1636,
+        "output_tokens": 170,
+        "total_tokens": 1806
+      },
+      {
+        "requirement_id": "REQ-10",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 5451,
+        "input_tokens": 1792,
+        "output_tokens": 98,
+        "total_tokens": 1890
+      },
+      {
+        "requirement_id": "REQ-06",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2066,
+        "input_tokens": 940,
+        "output_tokens": 21,
+        "total_tokens": 961
+      },
+      {
+        "requirement_id": "REQ-06",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2490,
+        "input_tokens": 1090,
+        "output_tokens": 24,
+        "total_tokens": 1114
+      },
+      {
+        "requirement_id": "REQ-06",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 3810,
+        "input_tokens": 1549,
+        "output_tokens": 24,
+        "total_tokens": 1573
+      },
+      {
+        "requirement_id": "REQ-06",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2607,
+        "input_tokens": 1163,
+        "output_tokens": 24,
+        "total_tokens": 1187
+      },
+      {
+        "requirement_id": "REQ-06",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 8366,
+        "input_tokens": 2733,
+        "output_tokens": 88,
+        "total_tokens": 2821
+      },
+      {
+        "requirement_id": "REQ-01",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2012,
+        "input_tokens": 935,
+        "output_tokens": 24,
+        "total_tokens": 959
+      },
+      {
+        "requirement_id": "REQ-01",
+        "operation": "tool_selection",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2598,
+        "input_tokens": 1164,
+        "output_tokens": 82,
+        "total_tokens": 1246
+      },
+      {
+        "requirement_id": "REQ-01",
+        "operation": "structured_decision",
+        "attempt": 1,
+        "status": "completed",
+        "prompt_characters": 2138,
+        "input_tokens": 692,
+        "output_tokens": 69,
+        "total_tokens": 761
+      }
+    ],
+    "prompt_characters": 125013,
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "requirements": {
+      "REQ-09": {
+        "calls": 5,
+        "prompt_characters": 18949,
+        "input_tokens": 7449,
+        "output_tokens": 270,
+        "total_tokens": 7719,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2073,
+            "input_tokens": 941,
+            "output_tokens": 25,
+            "total_tokens": 966
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2686,
+            "input_tokens": 1175,
+            "output_tokens": 90,
+            "total_tokens": 1265
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3798,
+            "input_tokens": 1622,
+            "output_tokens": 25,
+            "total_tokens": 1647
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2611,
+            "input_tokens": 1169,
+            "output_tokens": 25,
+            "total_tokens": 1194
+          },
+          {
+            "requirement_id": "REQ-09",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 7781,
+            "input_tokens": 2542,
+            "output_tokens": 105,
+            "total_tokens": 2647
+          }
+        ]
+      },
+      "REQ-11": {
+        "calls": 3,
+        "prompt_characters": 7045,
+        "input_tokens": 2848,
+        "output_tokens": 242,
+        "total_tokens": 3090,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-11",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2096,
+            "input_tokens": 950,
+            "output_tokens": 25,
+            "total_tokens": 975
+          },
+          {
+            "requirement_id": "REQ-11",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2725,
+            "input_tokens": 1189,
+            "output_tokens": 97,
+            "total_tokens": 1286
+          },
+          {
+            "requirement_id": "REQ-11",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2224,
+            "input_tokens": 709,
+            "output_tokens": 120,
+            "total_tokens": 829
+          }
+        ]
+      },
+      "REQ-03": {
+        "calls": 3,
+        "prompt_characters": 6861,
+        "input_tokens": 2783,
+        "output_tokens": 146,
+        "total_tokens": 2929,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-03",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2095,
+            "input_tokens": 955,
+            "output_tokens": 21,
+            "total_tokens": 976
+          },
+          {
+            "requirement_id": "REQ-03",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2537,
+            "input_tokens": 1114,
+            "output_tokens": 25,
+            "total_tokens": 1139
+          },
+          {
+            "requirement_id": "REQ-03",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2229,
+            "input_tokens": 714,
+            "output_tokens": 100,
+            "total_tokens": 814
+          }
+        ]
+      },
+      "REQ-02": {
+        "calls": 2,
+        "prompt_characters": 3669,
+        "input_tokens": 1445,
+        "output_tokens": 129,
+        "total_tokens": 1574,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-02",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2080,
+            "input_tokens": 945,
+            "output_tokens": 75,
+            "total_tokens": 1020
+          },
+          {
+            "requirement_id": "REQ-02",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 1589,
+            "input_tokens": 500,
+            "output_tokens": 54,
+            "total_tokens": 554
+          }
+        ]
+      },
+      "REQ-07": {
+        "calls": 3,
+        "prompt_characters": 6938,
+        "input_tokens": 2855,
+        "output_tokens": 204,
+        "total_tokens": 3059,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-07",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2038,
+            "input_tokens": 940,
+            "output_tokens": 25,
+            "total_tokens": 965
+          },
+          {
+            "requirement_id": "REQ-07",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2687,
+            "input_tokens": 1195,
+            "output_tokens": 104,
+            "total_tokens": 1299
+          },
+          {
+            "requirement_id": "REQ-07",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2213,
+            "input_tokens": 720,
+            "output_tokens": 75,
+            "total_tokens": 795
+          }
+        ]
+      },
+      "REQ-05": {
+        "calls": 3,
+        "prompt_characters": 6932,
+        "input_tokens": 2876,
+        "output_tokens": 285,
+        "total_tokens": 3161,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-05",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2069,
+            "input_tokens": 959,
+            "output_tokens": 25,
+            "total_tokens": 984
+          },
+          {
+            "requirement_id": "REQ-05",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2678,
+            "input_tokens": 1201,
+            "output_tokens": 102,
+            "total_tokens": 1303
+          },
+          {
+            "requirement_id": "REQ-05",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2185,
+            "input_tokens": 716,
+            "output_tokens": 158,
+            "total_tokens": 874
+          }
+        ]
+      },
+      "REQ-12": {
+        "calls": 4,
+        "prompt_characters": 9040,
+        "input_tokens": null,
+        "output_tokens": null,
+        "total_tokens": null,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "rate_limited",
+            "prompt_characters": 2073,
+            "input_tokens": null,
+            "output_tokens": null,
+            "total_tokens": null
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 2,
+            "status": "completed",
+            "prompt_characters": 2073,
+            "input_tokens": 939,
+            "output_tokens": 25,
+            "total_tokens": 964
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2691,
+            "input_tokens": 1171,
+            "output_tokens": 64,
+            "total_tokens": 1235
+          },
+          {
+            "requirement_id": "REQ-12",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2203,
+            "input_tokens": 696,
+            "output_tokens": 84,
+            "total_tokens": 780
+          }
+        ]
+      },
+      "REQ-08": {
+        "calls": 5,
+        "prompt_characters": 18591,
+        "input_tokens": 7222,
+        "output_tokens": 247,
+        "total_tokens": 7469,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2106,
+            "input_tokens": 955,
+            "output_tokens": 21,
+            "total_tokens": 976
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2547,
+            "input_tokens": 1113,
+            "output_tokens": 24,
+            "total_tokens": 1137
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3902,
+            "input_tokens": 1578,
+            "output_tokens": 24,
+            "total_tokens": 1602
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2478,
+            "input_tokens": 1119,
+            "output_tokens": 25,
+            "total_tokens": 1144
+          },
+          {
+            "requirement_id": "REQ-08",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 7558,
+            "input_tokens": 2457,
+            "output_tokens": 153,
+            "total_tokens": 2610
+          }
+        ]
+      },
+      "REQ-04": {
+        "calls": 3,
+        "prompt_characters": 7074,
+        "input_tokens": 2948,
+        "output_tokens": 179,
+        "total_tokens": 3127,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-04",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2050,
+            "input_tokens": 955,
+            "output_tokens": 24,
+            "total_tokens": 979
+          },
+          {
+            "requirement_id": "REQ-04",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2754,
+            "input_tokens": 1238,
+            "output_tokens": 69,
+            "total_tokens": 1307
+          },
+          {
+            "requirement_id": "REQ-04",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2270,
+            "input_tokens": 755,
+            "output_tokens": 86,
+            "total_tokens": 841
+          }
+        ]
+      },
+      "REQ-10": {
+        "calls": 4,
+        "prompt_characters": 13827,
+        "input_tokens": 5517,
+        "output_tokens": 394,
+        "total_tokens": 5911,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2027,
+            "input_tokens": 940,
+            "output_tokens": 24,
+            "total_tokens": 964
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2569,
+            "input_tokens": 1149,
+            "output_tokens": 102,
+            "total_tokens": 1251
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3780,
+            "input_tokens": 1636,
+            "output_tokens": 170,
+            "total_tokens": 1806
+          },
+          {
+            "requirement_id": "REQ-10",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 5451,
+            "input_tokens": 1792,
+            "output_tokens": 98,
+            "total_tokens": 1890
+          }
+        ]
+      },
+      "REQ-06": {
+        "calls": 5,
+        "prompt_characters": 19339,
+        "input_tokens": 7475,
+        "output_tokens": 181,
+        "total_tokens": 7656,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2066,
+            "input_tokens": 940,
+            "output_tokens": 21,
+            "total_tokens": 961
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2490,
+            "input_tokens": 1090,
+            "output_tokens": 24,
+            "total_tokens": 1114
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 3810,
+            "input_tokens": 1549,
+            "output_tokens": 24,
+            "total_tokens": 1573
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2607,
+            "input_tokens": 1163,
+            "output_tokens": 24,
+            "total_tokens": 1187
+          },
+          {
+            "requirement_id": "REQ-06",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 8366,
+            "input_tokens": 2733,
+            "output_tokens": 88,
+            "total_tokens": 2821
+          }
+        ]
+      },
+      "REQ-01": {
+        "calls": 3,
+        "prompt_characters": 6748,
+        "input_tokens": 2791,
+        "output_tokens": 175,
+        "total_tokens": 2966,
+        "calls_detail": [
+          {
+            "requirement_id": "REQ-01",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2012,
+            "input_tokens": 935,
+            "output_tokens": 24,
+            "total_tokens": 959
+          },
+          {
+            "requirement_id": "REQ-01",
+            "operation": "tool_selection",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2598,
+            "input_tokens": 1164,
+            "output_tokens": 82,
+            "total_tokens": 1246
+          },
+          {
+            "requirement_id": "REQ-01",
+            "operation": "structured_decision",
+            "attempt": 1,
+            "status": "completed",
+            "prompt_characters": 2138,
+            "input_tokens": 692,
+            "output_tokens": 69,
+            "total_tokens": 761
+          }
+        ]
+      }
+    }
+  },
+  "metrics": {
+    "llm_calls": 43,
+    "llm_retries": 1,
+    "llm_prompt_characters": 125013,
+    "agent_tool_calls": 36,
+    "trace_events": 61,
+    "jira_api_calls": 34,
+    "jira_retries": 0,
+    "jira_errors": 0
+  },
+  "generated_at": "2026-11-10T05:19:21.635063+00:00"
+}

@@ -1,0 +1,546 @@
+{
+  "assessment_id": "755ed39b-6828-4f7f-b7bc-fc74adb0a4a6",
+  "dataset_label": "tyn-release-assessment-v2",
+  "project_key": "SCRUM",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "overall_decision": "NEEDS_REVIEW",
+  "total_requirements": 12,
+  "pass_count": 0,
+  "fail_count": 0,
+  "insufficient_evidence_count": 12,
+  "requirements": [
+    {
+      "requirement_id": "REQ-09",
+      "summary": "Rollback rehearsal",
+      "mandatory": true,
+      "acceptance_criteria": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "The retrieved evidence does not include an applicable, appropriately qualified verification or approval.",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Check comments on SCRUM-147 and related evidence tickets for rollback rehearsal execution and approval records.",
+        "Obtain target-scoped verification from an authorized QA or requirement owner."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-11",
+      "summary": "Accessible keyboard handoff",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-03",
+      "summary": "Answer quality for deployed prompt",
+      "mandatory": true,
+      "acceptance_criteria": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-02",
+      "summary": "Customer document isolation",
+      "mandatory": true,
+      "acceptance_criteria": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-07",
+      "summary": "Sensitive log redaction",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-05",
+      "summary": "Model usage cost",
+      "mandatory": true,
+      "acceptance_criteria": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-12",
+      "summary": "Streaming completion integrity",
+      "mandatory": true,
+      "acceptance_criteria": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-08",
+      "summary": "Human handoff delivery",
+      "mandatory": true,
+      "acceptance_criteria": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-04",
+      "summary": "Response latency",
+      "mandatory": true,
+      "acceptance_criteria": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-10",
+      "summary": "Document parsing completeness",
+      "mandatory": true,
+      "acceptance_criteria": "The target build must pass all 60 mandatory document parsing cases.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-06",
+      "summary": "Production security approval",
+      "mandatory": true,
+      "acceptance_criteria": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-01",
+      "summary": "Automated regression tests",
+      "mandatory": true,
+      "acceptance_criteria": "All automated regression cases must pass on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RuntimeError: Assessment model-token budget exhausted",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    }
+  ],
+  "investigation_trace": [
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "project_key": "SCRUM",
+        "dataset_label": "tyn-release-assessment-v2",
+        "record_kind": "manifest",
+        "max_dataset_records": 1000
+      },
+      "result_summary": "Discovered one manifest and 12 linked requirements in Jira.",
+      "duration_ms": 3587.8508999994665,
+      "timestamp": "2026-11-09T18:40:51.878890+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 432.9945999998017,
+      "timestamp": "2026-11-09T18:40:58.944310+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 761.5837000012107,
+      "timestamp": "2026-11-09T18:41:00.854821+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1633.1582999991952,
+      "timestamp": "2026-11-09T18:41:08.018257+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-109",
+        "source_id": "REC-6011"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 406.626399999368,
+      "timestamp": "2026-11-09T18:41:13.344323+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-109",
+        "source_id": "REC-6011"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 929.199800000788,
+      "timestamp": "2026-11-09T18:41:21.157683+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-178",
+        "source_id": "REC-6198"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 479.1153000005579,
+      "timestamp": "2026-11-09T18:41:31.645629+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-178",
+        "source_id": "REC-6198"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 876.934899999469,
+      "timestamp": "2026-11-09T18:41:33.415583+00:00"
+    },
+    {
+      "tool": "agent_investigation_note",
+      "arguments": {
+        "action_summary": "Investigated SCRUM-147 (REQ-09) and linked evidence items SCRUM-109 and SCRUM-178",
+        "issue_key": "SCRUM-147"
+      },
+      "result_summary": "Found two conflicting rollback rehearsal evidence records (SCRUM-109 and SCRUM-178) on target release R2.4, commit b7a91f2, service atlas-assistant, environment production. SCRUM-109 (RB-401) succeeded. SCRUM-178 (RB-402) failed due to session record loss. Under the rules, contradictory equally authoritative current records with no resolution mean insufficient evidence rather than file order.",
+      "duration_ms": 0.03529999958118424,
+      "timestamp": "2026-11-09T18:41:37.313356+00:00"
+    },
+    {
+      "tool": "record_investigation",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "action_summary": "Investigated SCRUM-147 (REQ-09) and linked evidence items SCRUM-109 and SCRUM-178",
+        "arguments_json": "{\"issue_key\": \"SCRUM-147\"}",
+        "result_summary": "Found two conflicting rollback rehearsal evidence records (SCRUM-109 and SCRUM-178) on target release R2.4, commit b7a91f2, service atlas-assistant, environment production. SCRUM-109 (RB-401) succeeded. SCRUM-178 (RB-402) failed due to session record loss. Under the rules, contradictory equally authoritative current records with no resolution mean insufficient evidence rather than file order."
+      },
+      "result_summary": "Investigation note recorded.",
+      "duration_ms": 16.485599997395184,
+      "timestamp": "2026-11-09T18:41:37.329837+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 509.3388999994204,
+      "timestamp": "2026-11-09T18:41:45.396151+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 818.2355999997526,
+      "timestamp": "2026-11-09T18:41:51.132573+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-166",
+        "source_id": "REQ-11"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1601.6645000017888,
+      "timestamp": "2026-11-09T18:42:08.129997+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-106",
+        "source_id": "REC-8801"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 511.82689999768627,
+      "timestamp": "2026-11-09T18:42:18.684548+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-263",
+        "source_id": "REC-8515"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 507.0367000007536,
+      "timestamp": "2026-11-09T18:42:18.686483+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-106",
+        "source_id": "REC-8801"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 906.8541999986337,
+      "timestamp": "2026-11-09T18:42:19.089504+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-263",
+        "source_id": "REC-8515"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 818.9342000005126,
+      "timestamp": "2026-11-09T18:42:29.224803+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "jql_query": "text ~ \"REQ-11\" OR text ~ \"SCRUM-166\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 1 issues in the enforced project and dataset scope.",
+      "duration_ms": 675.1932000006491,
+      "timestamp": "2026-11-09T18:42:36.966767+00:00"
+    },
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "jql_query": "text ~ \"KBD-210\" OR text ~ \"handoff\"",
+        "max_results": 20
+      },
+      "result_summary": "Found 6 issues in the enforced project and dataset scope.",
+      "duration_ms": 479.8249000014039,
+      "timestamp": "2026-11-09T18:42:45.087295+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-80",
+        "source_id": "REC-9635"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 814.0939000004437,
+      "timestamp": "2026-11-09T18:42:47.039173+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-11",
+        "issue_key": "SCRUM-52",
+        "source_id": "REQ-08"
+      },
+      "result_summary": "Found 2 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 1280.3105999992113,
+      "timestamp": "2026-11-09T18:42:57.176369+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-11"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.218607+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-03"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.361757+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-02"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.425939+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-07"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.471436+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-05"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.520785+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-12"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.565138+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-08"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.605940+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-04"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.655951+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-10"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.701823+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-06"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.754240+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-01"
+      },
+      "result_summary": "ERROR: RuntimeError: Assessment model-token budget exhausted",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:42:57.814991+00:00"
+    }
+  ],
+  "execution_time_seconds": 130.60160899999755,
+  "llm_model": "gemini/gemini-3.5-flash-lite",
+  "llm_usage": {
+    "input_tokens": 61440,
+    "output_tokens": 1312,
+    "total_tokens": 62752
+  },
+  "metrics": {
+    "llm_calls": 21,
+    "agent_tool_calls": 25,
+    "trace_events": 32
+  },
+  "generated_at": "2026-11-09T18:42:57.821851+00:00"
+}

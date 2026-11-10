@@ -1,0 +1,376 @@
+{
+  "assessment_id": "c74de079-7eec-4dc7-bc21-a76e71c35aa1",
+  "dataset_label": "tyn-release-assessment-v2",
+  "project_key": "SCRUM",
+  "target": {
+    "release": "R2.4",
+    "commit": "b7a91f2",
+    "prompt": "p7",
+    "environment": "production",
+    "service": "atlas-assistant"
+  },
+  "overall_decision": "NEEDS_REVIEW",
+  "total_requirements": 12,
+  "pass_count": 0,
+  "fail_count": 0,
+  "insufficient_evidence_count": 12,
+  "requirements": [
+    {
+      "requirement_id": "REQ-09",
+      "summary": "Rollback rehearsal",
+      "mandatory": true,
+      "acceptance_criteria": "An approved rollback rehearsal must succeed on the target release and production configuration.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: BadRequestError: Error code: 400 - {'error': {'message': \"tool call validation failed: attempted to call tool 'record_investiation' which was not in request.tools\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': 'The comments on the requirement itself are just developer status updates. The actual rehearsal evidence is in the two \"Rollback rehearsal\" linked issues. Let me examine both.\\n\\n<tool_call>\\n<function=record_investiation>\\n<parameter=action_summary>\\nplaceholder\\n</parameter>\\n<parameter=arguments_json>\\n{}\\n</parameter>\\n<parameter=result_summary>\\nplaceholder\\n</parameter>\\n</function>\\n</tool_call>'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-11",
+      "summary": "Accessible keyboard handoff",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify keyboard navigation and focus handling for the handoff interface on the target release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: BadRequestError: Error code: 400 - {'error': {'message': \"tool call validation failed: parameters for tool inspect_requirement did not match schema: errors: [missing properties: 'requirement_id']\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': 'I\\'ll investigate REQ-11 (Accessible keyboard handoff) for the R2.4 release. Let me start by gathering the requirement details, linked issues, and comments.\\n\\n<tool_call>\\n<function=inspect_requirement>\\n< parameter=\"requirement_id>\\nREQ-11\\n</parameter>\\n</function>\\n</tool_call>'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-03",
+      "summary": "Answer quality for deployed prompt",
+      "mandatory": true,
+      "acceptance_criteria": "The approved quality evaluation must achieve at least 90 percent and match the deployed prompt p7.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6689, Requested 1512. Please try again in 10.294285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-02",
+      "summary": "Customer document isolation",
+      "mandatory": true,
+      "acceptance_criteria": "Every isolation case must pass; any confirmed cross-customer document exposure blocks release.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6672, Requested 1502. Please try again in 10.062857142s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-07",
+      "summary": "Sensitive log redaction",
+      "mandatory": true,
+      "acceptance_criteria": "QA must verify that sensitive identifiers are redacted on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6655, Requested 1499. Please try again in 9.891428571s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-05",
+      "summary": "Model usage cost",
+      "mandatory": true,
+      "acceptance_criteria": "Mean model cost per successful request must be at most USD 0.012 using the exercise rate card.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6640, Requested 1516. Please try again in 9.908571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-12",
+      "summary": "Streaming completion integrity",
+      "mandatory": true,
+      "acceptance_criteria": "Every mandatory streaming case must complete without duplicate or missing final messages.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6619, Requested 1496. Please try again in 9.557142857s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-08",
+      "summary": "Human handoff delivery",
+      "mandatory": true,
+      "acceptance_criteria": "When an answer is escalated, a handoff must reach the support queue, including its linked delivery dependency.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6602, Requested 1512. Please try again in 9.548571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-04",
+      "summary": "Response latency",
+      "mandatory": true,
+      "acceptance_criteria": "The production-equivalent target-build p95 response time must be at most 2.0 seconds.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6583, Requested 1510. Please try again in 9.368571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-10",
+      "summary": "Document parsing completeness",
+      "mandatory": true,
+      "acceptance_criteria": "The target build must pass all 60 mandatory document parsing cases.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6564, Requested 1497. Please try again in 9.094285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-06",
+      "summary": "Production security approval",
+      "mandatory": true,
+      "acceptance_criteria": "Security Owner Asha Rao must explicitly approve this release and commit for production.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6548, Requested 1499. Please try again in 8.974285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    },
+    {
+      "requirement_id": "REQ-01",
+      "summary": "Automated regression tests",
+      "mandatory": true,
+      "acceptance_criteria": "All automated regression cases must pass on the target build.",
+      "decision": "INSUFFICIENT_EVIDENCE",
+      "explanation": "Assessment could not be completed: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6531, Requested 1492. Please try again in 8.768571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "supporting_evidence": [],
+      "applicability": [],
+      "rejected_evidence": [],
+      "outstanding_verification": [
+        "Retry the Jira-backed investigation after resolving the reported failure."
+      ],
+      "clarification_required": []
+    }
+  ],
+  "investigation_trace": [
+    {
+      "tool": "search_jira_issues",
+      "arguments": {
+        "project_key": "SCRUM",
+        "dataset_label": "tyn-release-assessment-v2",
+        "record_kind": "manifest",
+        "max_dataset_records": 1000
+      },
+      "result_summary": "Discovered one manifest and 12 linked requirements in Jira.",
+      "duration_ms": 3701.8190000017057,
+      "timestamp": "2026-11-09T18:12:19.433255+00:00"
+    },
+    {
+      "tool": "inspect_requirement",
+      "arguments": {
+        "requirement_id": "REQ-09"
+      },
+      "result_summary": "Retrieved requirement from Jira.",
+      "duration_ms": 1008.5164000010991,
+      "timestamp": "2026-11-09T18:12:22.886649+00:00"
+    },
+    {
+      "tool": "get_jira_issue",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved one in-scope Jira issue.",
+      "duration_ms": 405.1047000029939,
+      "timestamp": "2026-11-09T18:12:24.426115+00:00"
+    },
+    {
+      "tool": "get_jira_comments",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Retrieved all 5 Jira comments; returned 5 prioritized comments within the context limit.",
+      "duration_ms": 1028.9749000003212,
+      "timestamp": "2026-11-09T18:12:25.058874+00:00"
+    },
+    {
+      "tool": "get_linked_issues",
+      "arguments": {
+        "requirement_id": "REQ-09",
+        "issue_key": "SCRUM-147",
+        "source_id": "REQ-09"
+      },
+      "result_summary": "Found 3 in-scope linked issues; excluded 0 out-of-scope links.",
+      "duration_ms": 2037.497199999052,
+      "timestamp": "2026-11-09T18:12:26.070623+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-09"
+      },
+      "result_summary": "ERROR: BadRequestError: Error code: 400 - {'error': {'message': \"tool call validation failed: attempted to call tool 'record_investiation' which was not in request.tools\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': 'The comments on the requirement itself are just developer status updates. The actual rehearsal evidence is in the two \"Rollback rehearsal\" linked issues. Let me examine both.\\n\\n<tool_call>\\n<function=record_investiation>\\n<parameter=action_summary>\\nplaceholder\\n</parameter>\\n<parameter=arguments_json>\\n{}\\n</parameter>\\n<parameter=result_summary>\\nplaceholder\\n</parameter>\\n</function>\\n</tool_call>'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:26.728546+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-11"
+      },
+      "result_summary": "ERROR: BadRequestError: Error code: 400 - {'error': {'message': \"tool call validation failed: parameters for tool inspect_requirement did not match schema: errors: [missing properties: 'requirement_id']\", 'type': 'invalid_request_error', 'code': 'tool_use_failed', 'failed_generation': 'I\\'ll investigate REQ-11 (Accessible keyboard handoff) for the R2.4 release. Let me start by gathering the requirement details, linked issues, and comments.\\n\\n<tool_call>\\n<function=inspect_requirement>\\n< parameter=\"requirement_id>\\nREQ-11\\n</parameter>\\n</function>\\n</tool_call>'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:27.918573+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-03"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6689, Requested 1512. Please try again in 10.294285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.136470+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-02"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6672, Requested 1502. Please try again in 10.062857142s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.286734+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-07"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6655, Requested 1499. Please try again in 9.891428571s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.429367+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-05"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6640, Requested 1516. Please try again in 9.908571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.570152+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-12"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6619, Requested 1496. Please try again in 9.557142857s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.733097+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-08"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6602, Requested 1512. Please try again in 9.548571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:28.889477+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-04"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6583, Requested 1510. Please try again in 9.368571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:29.062800+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-10"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6564, Requested 1497. Please try again in 9.094285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:29.210930+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-06"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6548, Requested 1499. Please try again in 8.974285714s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:29.350531+00:00"
+    },
+    {
+      "tool": "agent_reasoning",
+      "arguments": {
+        "requirement_id": "REQ-01"
+      },
+      "result_summary": "ERROR: RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m70pqd8qe079py3tg8abb3nz` service tier `on_demand` on input tokens per minute (ITPM): Limit 7000, Used 6531, Requested 1492. Please try again in 8.768571428s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+      "duration_ms": 0.0,
+      "timestamp": "2026-11-09T18:12:29.495530+00:00"
+    }
+  ],
+  "execution_time_seconds": 14.986785199998849,
+  "llm_model": "groq/qwen/qwen3.8-27b",
+  "llm_usage": {
+    "input_tokens": 3211,
+    "output_tokens": 231,
+    "total_tokens": 3442
+  },
+  "metrics": {
+    "llm_calls": 14,
+    "agent_tool_calls": 4,
+    "trace_events": 17
+  },
+  "generated_at": "2026-11-09T18:12:29.519920+00:00"
+}
