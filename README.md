@@ -79,7 +79,7 @@ Run the CLI assessment for R2.4:
 python scripts\run_assessment.py --release R2.4
 ```
 
-The project key and dataset label default to `JIRA_PROJECT_KEY` and `JIRA_DATASET_LABEL`. The target configuration is read from the Jira manifest and checked against the requested release. The CLI writes `reports/{assessment_id}.json` and `reports/{assessment_id}.md`; the assessment database and investigation trace are stored under the configured report/database paths.
+The project key and dataset label default to `JIRA_PROJECT_KEY` and `JIRA_DATASET_LABEL`. The target configuration is read from the Jira manifest and checked against the requested release. Each completed assessment becomes the final report pair in `reports/final/{assessment_id}.json` and `reports/final/{assessment_id}.md`. Any existing report pair in `reports/final/` is moved to `reports/development/` before the new pair is published. The assessment database and investigation trace remain under the configured report/database paths.
 
 To override the target, supply `--commit`, `--service`, and `--environment` together; `--prompt` is optional:
 
